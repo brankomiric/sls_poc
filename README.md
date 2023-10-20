@@ -1,5 +1,5 @@
 # sls_poc
-(https://app.serverless.com)[serverless framework] playground
+[serverless framework](https://app.serverless.com) playground
 
 ### Installing serverless
 ```bash
