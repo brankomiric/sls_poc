@@ -30,4 +30,14 @@ Creating a new serverless project
   Other
 ```
 
+### List more templates
+```bash
+serverless create --help
+```
+
+### Create project from template example
+```bash
+sls create --template fn-go --path golang_poc
+```
+
 
