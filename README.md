@@ -37,7 +37,12 @@ serverless create --help
 
 ### Create project from template example
 ```bash
-sls create --template fn-go --path golang_poc
+serverless create --template aws-go --path golang_poc
+```
+
+### Invoke function
+```bash
+serverless invoke [local] --function <func_name>
 ```
 
 
