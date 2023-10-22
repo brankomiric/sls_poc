@@ -56,11 +56,11 @@ package:
     - ./bin/**
 
 functions:
-  hello:
-    handler: bin/hello
+  ip-addresser:
+    handler: bin/ipAddresser
     events:
       - httpApi:
-          path: /hello
+          path: /ip/address
           method: get
   world:
     handler: bin/world

@@ -45,4 +45,13 @@ serverless create --template aws-go --path golang_poc
 serverless invoke [local] --function <func_name>
 ```
 
+### Deploy function
+```bash
+serverless deploy --verbose  --function <func_name>
+```
+
+### Remove
+```bash
+serverless remove
+```
 
