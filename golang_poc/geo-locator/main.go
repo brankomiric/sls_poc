@@ -5,14 +5,12 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"golang_poc/common"
+	"golang_poc/geo-locator/service"
+
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"golang_poc/common"
 )
-
-type response struct {
-	Ip string `json:"ip"`
-}
 
 func Handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	sourceIp := req.Headers["x-forwarded-for"]
@@ -20,12 +18,19 @@ func Handler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse,
 	var body []byte
 	var err error
 	if common.IsValidIPAddress(sourceIp, false) || common.IsValidIPAddress(sourceIp, true) {
-		ipAddress := &response{sourceIp}
-		body, err = json.Marshal(ipAddress)
+		geoData, err := service.GetLocationData(sourceIp)
+		if err != nil {
+			goto errorCheck
+		}
+		body, err = json.Marshal(geoData)
+		if err != nil {
+			goto errorCheck
+		}
 	} else {
 		body, err = json.Marshal(map[string]string{"message": "Invalid IP Address"})
 	}
 
+errorCheck:
 	if err != nil {
 		return events.APIGatewayProxyResponse{
 			StatusCode: http.StatusInternalServerError,

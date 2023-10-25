@@ -62,11 +62,11 @@ functions:
       - httpApi:
           path: /ip/address
           method: get
-  world:
-    handler: bin/world
+  geo-locator:
+    handler: bin/geoLocator
     events:
       - httpApi:
-          path: /world
+          path: /ip/geo-location
           method: get
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -106,8 +106,8 @@ functions:
 #            path: /hello
 
 #    Define function environment variables here
-#    environment:
-#      variable2: value2
+    environment:
+      IP_INFO_TOKEN: b35905920a45c5
 
 # you can add CloudFormation resource templates here
 #resources:

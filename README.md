@@ -55,3 +55,7 @@ serverless deploy --verbose  --function <func_name>
 serverless remove
 ```
 
+## Build without deploy (updates .serveless dir)
+```bash
+serverless package
+```
