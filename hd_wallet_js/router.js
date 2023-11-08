@@ -10,7 +10,13 @@ export default (event) => {
     event.requestContext.http.path == "/wallet/restore" &&
     event.requestContext.http.method == "POST"
   ) {
-    return restore(event.body);
+    let body;
+    try {
+      body = JSON.parse(event.body);
+    } catch {
+      body = event.body;
+    }
+    return restore(body);
   } else {
     throw new Error(`${event.requestContext.http.path} match not found`);
   }

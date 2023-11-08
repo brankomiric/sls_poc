@@ -20,10 +20,11 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
-#  patterns:
-#    - '!exclude-me.js'
-#    - '!exclude-me-dir/**'
+package:
+  patterns:
+    - '!README.md'
+    - '!test/**'
+    - '!.gitignore'
 #    - include-me.js
 #    - include-me-dir/**
 

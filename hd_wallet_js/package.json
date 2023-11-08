@@ -12,10 +12,9 @@
     "hd_wallet",
     "ethereum"
   ],
-  "author": "branko.miric.ns@gmail.com",
+  "author": "captainwhiteboii@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@ethersproject/hdnode": "^5.7.0",
     "ethers": "^6.8.1"
   }
 }

@@ -1,5 +1,4 @@
-import { Wallet } from "ethers";
-import { isValidMnemonic } from "@ethersproject/hdnode";
+import { Wallet, Mnemonic } from "ethers";
 
 export default class EthWallet {
   constructor() {
@@ -16,7 +15,8 @@ export default class EthWallet {
   }
 
   restoreFromMnemonic(mnemonic, limit) {
-    if (!isValidMnemonic(mnemonic)) throw new Error("Invalid seed phrase");
+    if (!Mnemonic.isValidMnemonic(mnemonic))
+      throw new Error(`Invalid seed phrase: [${mnemonic}]`);
     const wallet = Wallet.fromPhrase(mnemonic);
     const keys = [...Array(limit).keys()].map((i) => {
       const hdNodeWallet = wallet.derivePath(this.pathBIP + i);
