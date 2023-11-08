@@ -39,6 +39,9 @@ serverless create --help
 ```bash
 serverless create --template aws-go --path golang_poc
 ```
+```bash
+serverless create --template aws-nodejs --path hd_wallet_js
+```
 
 ### Invoke function
 ```bash

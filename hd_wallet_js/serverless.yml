@@ -1,0 +1,39 @@
+service: hd-wallet-js
+# app and org for use with dashboard.serverless.com
+app: hd-wallet-js
+org: drseuss
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+# you can overwrite defaults here
+  stage: dev
+  region: eu-central-1
+
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+# you can add packaging information here
+#package:
+#  patterns:
+#    - '!exclude-me.js'
+#    - '!exclude-me-dir/**'
+#    - include-me.js
+#    - include-me-dir/**
+
+functions:
+  hd-wallet:
+    handler: handler.wallet
+    events:
+      - httpApi:
+          path: /wallet/generate
+          method: get
+      - httpApi:
+          path: /wallet/restore
+          method: post

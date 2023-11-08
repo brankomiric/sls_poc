@@ -1,0 +1,21 @@
+{
+  "name": "hd_wallet_js",
+  "version": "1.0.0",
+  "description": "endpoints exposing hd wallet generation/restoration functionalities",
+  "main": "handler.js",
+  "type": "module",
+  "scripts": {
+    "prettier": "npx prettier --write **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hd_wallet",
+    "ethereum"
+  ],
+  "author": "branko.miric.ns@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/hdnode": "^5.7.0",
+    "ethers": "^6.8.1"
+  }
+}
