@@ -6,14 +6,13 @@ export const wallet = async (event) => {
     const response = router(event);
     return {
       statusCode: 200,
-      body: JSON.stringify(response),
+      body: response,
     };
   } catch (err) {
-    console.error(err);
     return {
       statusCode: 500,
       body: {
-        message: "Something went wrong",
+        message: err.toString(),
       },
     };
   }
