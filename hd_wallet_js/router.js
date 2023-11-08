@@ -1,11 +1,17 @@
 import { generate, restore } from "./routeHandlers.js";
 
 export default (event) => {
-  if (event.path == "/wallet/generate" && event.httpMethod == "GET") {
+  if (
+    event.requestContext.http.path == "/wallet/generate" &&
+    event.requestContext.http.method == "GET"
+  ) {
     return generate(event.queryStringParameters);
-  } else if (event.path == "/wallet/restore" && event.httpMethod == "POST") {
+  } else if (
+    event.requestContext.http.path == "/wallet/restore" &&
+    event.requestContext.http.method == "POST"
+  ) {
     return restore(event.body);
   } else {
-    throw new Error("Invalid path or httpMethod");
+    throw new Error(`${event.requestContext.http.path} match not found`);
   }
 };

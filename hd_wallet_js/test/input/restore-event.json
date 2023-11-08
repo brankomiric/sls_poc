@@ -1,35 +1,51 @@
 {
-    "resource": "/wallet",
-    "path": "/wallet/restore",
-    "httpMethod": "POST",
-    "requestContext": {
-        "resourcePath": "/",
-        "httpMethod": "POST",
-        "path": "/Dev/"
-    },
+    "version": "2.0",
+    "routeKey": "POST /wallet/restore",
+    "rawPath": "/wallet/restore",
+    "rawQueryString": "",
     "headers": {
-        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
         "accept-encoding": "gzip, deflate, br",
-        "Host": "70ixmpl4fl.execute-api.us-east-2.amazonaws.com",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
-        "X-Amzn-Trace-Id": "Root=1-5e66d96f-7491f09xmpl79d18acf3d050",
-        "x-forwarded-for": "46.235.99.206"
+        "accept-language": "en-GB,en;q=0.7",
+        "cache-control": "max-age=0",
+        "content-length": "0",
+        "host": "u0gkmt1a68.execute-api.eu-central-1.amazonaws.com",
+        "sec-ch-ua": "\"Brave\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "sec-gpc": "1",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+        "x-amzn-trace-id": "Root=1-654bb239-3cb2292e2999f7ec3e18cd64",
+        "x-forwarded-for": "46.235.99.241",
+        "x-forwarded-port": "443",
+        "x-forwarded-proto": "https"
     },
-    "multiValueHeaders": {
-        "accept": [
-            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-        ],
-        "accept-encoding": [
-            "gzip, deflate, br"
-        ]
-    },
-    "queryStringParameters": null,
-    "multiValueQueryStringParameters": null,
-    "pathParameters": null,
-    "stageVariables": null,
     "body": {
-        "seedPhrase": "below waste snack frown cable afford borrow valley such canoe hurdle wealthx",
+        "seedPhrase": "below waste snack frown cable afford borrow valley such canoe hurdle wealth",
         "accountLimit": 5
+    },
+    "requestContext": {
+        "accountId": "788830652993",
+        "apiId": "u0gkmt1a68",
+        "domainName": "u0gkmt1a68.execute-api.eu-central-1.amazonaws.com",
+        "domainPrefix": "u0gkmt1a68",
+        "http": {
+            "method": "POST",
+            "path": "/wallet/restore",
+            "protocol": "HTTP/1.1",
+            "sourceIp": "46.235.99.241",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+        },
+        "requestId": "OFjI-iadliAEJpg=",
+        "routeKey": "POST /wallet/restore",
+        "stage": "$default",
+        "time": "08/Nov/2023:16:07:21 +0000",
+        "timeEpoch": 1699459641144
     },
     "isBase64Encoded": false
 }
