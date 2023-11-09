@@ -38,3 +38,7 @@ functions:
       - httpApi:
           path: /wallet/restore
           method: post
+
+
+plugins:
+  - serverless-offline

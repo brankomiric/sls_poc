@@ -48,6 +48,12 @@ serverless create --template aws-nodejs --path hd_wallet_js
 serverless invoke [local] --function <func_name>
 ```
 
+### Invoke http triggered function using offline plugin
+This simplifies development on local and doesn't need Docker
+```bash
+serverless offline
+```
+
 ### Deploy function
 ```bash
 serverless deploy --verbose  --function <func_name>
