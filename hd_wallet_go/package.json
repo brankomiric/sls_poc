@@ -1,0 +1,13 @@
+{
+    "name": "hd_wallet_go",
+    "description": "To run the golang lambda service locally",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "serverless offline start --useDocker",
+        "watch": "nodemon --watch ./ -e go,js --exec build.sh"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "serverless-offline": "^13.2.1"
+    }
+}
